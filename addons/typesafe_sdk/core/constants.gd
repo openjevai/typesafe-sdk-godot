@@ -13,5 +13,13 @@ const DEFAULT_BASE_URL: String = "https://api.typesafe.ai"
 const DEFAULT_MODEL: String = "jev-latest"
 const DEFAULT_TIMEOUT: float = 10.0
 
+# OpenJEV — a free community gateway to the same Jev model.
+# Additive: TypeSafe remains the default; these are only used when OpenJEV is
+# selected (see TypeSafeConfig provider selection).
+const OPENJEV_API_KEY_ENV: String = "OPENJEV_API_KEY"
+const JEV_PROVIDER_ENV: String = "JEV_PROVIDER"
+const OPENJEV_DEFAULT_BASE_URL: String = "https://api.openjev.sh"
+const OPENJEV_DEFAULT_MODEL: String = "openjev"
+
 const SDK_NAME: String = "typesafe-sdk-godot"
 const SDK_VERSION: String = "0.1.0"

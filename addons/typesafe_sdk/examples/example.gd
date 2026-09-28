@@ -1,6 +1,10 @@
 # Example usage matching the Python SDK API as closely as GDScript allows.
 # https://docs.typesafe.ai/sdk/python
 # Attach this script to any Node in the scene tree and run the scene.
+#
+# OpenJEV (optional): set OPENJEV_API_KEY (or JEV_PROVIDER=openjev) in the
+# environment instead of TYPESAFE_API_KEY to route requests through the
+# OpenJEV community gateway (https://openjev.sh). TypeSafe stays the default.
 extends Node
 
 var client: TypeSafeClient

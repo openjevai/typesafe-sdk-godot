@@ -9,6 +9,20 @@
 - Default timeout: `10.0`s per HTTP operation (config) · retry budget `30.0`s
 - Env vars: `TYPESAFE_API_KEY`, `TYPESAFE_BASE_URL`, `TYPESAFE_DEFAULT_MODEL`,
   `TYPESAFE_LOG_LEVEL` (`debug`/`info`/`warning`/`error`/`off`)
+- OpenJEV env vars (optional): `OPENJEV_API_KEY`, `JEV_PROVIDER` (`openjev`)
+
+> **OpenJEV support:** Jev is built by [TypeSafe](https://typesafe.ai). This
+> fork keeps TypeSafe as the default and adds optional support for
+> [OpenJEV](https://openjev.sh), a free community gateway to the same Jev
+> model — set `OPENJEV_API_KEY` (or `JEV_PROVIDER=openjev`) to use it. Original
+> project: https://github.com/IAmNo1Special/typesafe-sdk-godot by
+> @IAmNo1Special.
+
+Provider selection (in `TypeSafeConfig`): an explicit `JEV_PROVIDER=openjev`
+wins; otherwise TypeSafe is used when `TYPESAFE_API_KEY` is set (unchanged
+default); otherwise OpenJEV is used when only `OPENJEV_API_KEY` is set. OpenJEV
+endpoint `https://api.openjev.sh/v1/systemone`, model `openjev`. Anyone with a
+TypeSafe key sees zero behaviour change.
 
 ## Clients
 
